@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FishSpawner : MonoBehaviour
 {
+    public GameObject Fishy = null;
     Rect SpawnRect = new Rect();
     Timer timer;
 
@@ -16,7 +17,31 @@ public class FishSpawner : MonoBehaviour
 
     void SpawnFish()
     {
-        Debug.Log("SpawnFish: ");
+        if (Fishy == null)
+            return;
+        
+        float x = 0.0f;
+        float y = 0.0f;
+
+        if(Random.Range(0,2) < 1)
+        {
+            if(Random.Range(0,2) < 1)
+                x = SpawnRect.x;
+            else
+                x = SpawnRect.xMax;
+            
+            y = Random.Range(SpawnRect.y, SpawnRect.yMax);
+        }
+        else{
+            if(Random.Range(0,2) < 1)
+                y = SpawnRect.y;
+            else
+                y = SpawnRect.yMax;
+            
+            x = Random.Range(SpawnRect.x, SpawnRect.xMax);
+        }
+
+        Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
     }
 
     void OnDrawGizmos()

@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4b973271a8e1a48a2b6f85b8a1ddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fishy: {fileID: 3670549521737053992, guid: d8012e7751834537aa0aca7bf3dc8f36, type: 3}
 --- !u!4 &1219006620
 Transform:
   m_ObjectHideFlags: 0
@@ -384,5 +385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6cfdd5499dc6c0ba90ffdd3a4ac506b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
+  TimeOut:
+    m_PersistentCalls:
+      m_Calls: []
+  AutoStart: 1
+  AutoRestart: 1
   CountDownTime: 1
