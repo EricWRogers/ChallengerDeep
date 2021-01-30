@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3981459868794243420}
   - component: {fileID: 3981459868794243421}
   - component: {fileID: 3981459868794243423}
+  - component: {fileID: -8126088351162272769}
   m_Layer: 0
   m_Name: EnemyFish
   m_TagString: Untagged
@@ -46,6 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   States: []
   FishWander:
+    StateStart:
+      m_PersistentCalls:
+        m_Calls: []
+    StateUpdated:
+      m_PersistentCalls:
+        m_Calls: []
+    StateExited:
+      m_PersistentCalls:
+        m_Calls: []
+    StateMachine: {fileID: 0}
+  FishChase:
     StateStart:
       m_PersistentCalls:
         m_Calls: []
@@ -106,3 +118,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8126088351162272769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981459868794243418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfdd5499dc6c0ba90ffdd3a4ac506b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeOut:
+    m_PersistentCalls:
+      m_Calls: []
+  AutoStart: 0
+  AutoRestart: 0
+  CountDownTime: 1

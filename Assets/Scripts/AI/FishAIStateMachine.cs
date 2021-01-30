@@ -14,6 +14,6 @@ public class FishAIStateMachine : FiniteStateMachine
         foreach(State state in States)
             state.StateMachine = this;
         
-        SetState(FishWander);
+        ChangeState(nameof(FishWanderState));
     }
 }

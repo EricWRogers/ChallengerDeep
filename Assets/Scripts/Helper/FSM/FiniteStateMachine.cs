@@ -7,8 +7,9 @@ public abstract class FiniteStateMachine : MonoBehaviour
     public List<State> States;                
     protected State state = null;
 
-    public void SetState(State _state)
+    private void SetState(State _state)
     {
+        Debug.Log("State Changed: " + nameof(_state));
         if(_state == null)
             return;
         if (state != null)
@@ -18,6 +19,18 @@ public abstract class FiniteStateMachine : MonoBehaviour
         
         state = _state;
         state.OnStart();
+    }
+
+    public void ChangeState(string stateName)
+    {
+        foreach(State _state in States)
+        {
+            if(stateName.ToLower() == _state.GetType().ToString().ToLower())
+            {
+                SetState(_state);
+                return;
+            }
+        }
     }
 
     public void FixedUpdate()

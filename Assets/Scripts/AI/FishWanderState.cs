@@ -12,6 +12,8 @@ public class FishWanderState : State
         timer = StateMachine.GetComponent<Timer>();
         timer.TimeOut.AddListener(TimeOut);
         timer.StartTimer(10.0f, false);
+
+        StateMachine.ChangeState(nameof(FishChaseState));
     }
 
     public override void UpdateState(float dt)
