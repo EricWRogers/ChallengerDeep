@@ -44,4 +44,9 @@ public class Timer : MonoBehaviour
 
         timeLeft = CountDownTime;
     }
+
+    public void StopTimer()
+    {
+        timeLeft = 0.0f;
+    }
 }
