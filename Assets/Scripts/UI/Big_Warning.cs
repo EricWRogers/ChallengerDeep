@@ -38,7 +38,7 @@ public class Big_Warning : MonoBehaviour
 
     Rect warningRect = new Rect();
     Timer timer;
-    private Timer attackTimer;
+    public Timer attackTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +47,6 @@ public class Big_Warning : MonoBehaviour
         timer = GetComponent<Timer>();
         timer.StartTimer(minTime, true);
         timer.TimeOut.AddListener(ActivateWarning);
-        attackTimer = GetComponentInChildren<Timer>();
         attackTimer.TimeOut.AddListener(SpawnBigFish);
     }
     private void OnDestroy()

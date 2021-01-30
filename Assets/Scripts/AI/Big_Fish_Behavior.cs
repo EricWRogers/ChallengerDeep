@@ -38,7 +38,7 @@ public class Big_Fish_Behavior : MonoBehaviour
     }
     void move(int direction)
     {
-        transform.Translate(direction * speed * Time.deltaTime, 0, 0);
+        transform.Translate(-direction * speed * Time.deltaTime, 0, 0);
     }
     private void FishDepawn()
     {

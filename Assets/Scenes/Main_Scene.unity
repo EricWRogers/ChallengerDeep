@@ -369,13 +369,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2718ea3caa12746a8bbb7f4a7659fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 3
-  attackTime: 1
+  minTime: 5
+  attackTime: 5
   noAttackChance: 25
   warning: {fileID: 1316163714}
   bigFish: {fileID: 4269220190769755734, guid: a2a477e72e5e0bc4f9e46f583e111497, type: 3}
   padding: 20
   fishDistance: 2
+  attackTimer: {fileID: 1732231940}
 --- !u!212 &1316163716
 SpriteRenderer:
   m_ObjectHideFlags: 0
