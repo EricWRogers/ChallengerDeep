@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FishAIStateMachine : FiniteStateMachine
 {
-    [SerializeField]
     public FishWanderState FishWander;
+    public FishChaseState FishChase;
 
     void Awake()
     {
