@@ -5,9 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class FishWanderState : State
 {
+    Timer timer = null;
     public override void OnStart()
     {
         base.OnStart();
+        timer = StateMachine.GetComponent<Timer>();
+        timer.TimeOut.AddListener(TimeOut);
+        timer.StartTimer(10.0f, false);
     }
 
     public override void UpdateState(float dt)
@@ -18,5 +22,10 @@ public class FishWanderState : State
     public override void OnExit()
     {
         base.OnExit();
+    }
+
+    private void TimeOut()
+    {
+
     }
 }
