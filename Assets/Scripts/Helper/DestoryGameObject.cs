@@ -6,6 +6,6 @@ public class DestoryGameObject : MonoBehaviour
 {
     public void Kill()
     {
-        Destory(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
