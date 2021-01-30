@@ -22,9 +22,16 @@ public class Player_Controller : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //stop = true;
+        stop = true;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            stop = !stop;
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -33,6 +40,7 @@ public class Player_Controller : MonoBehaviour
         rb.transform.LookAt(mouseInWorld);
         var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         targetPos.z = transform.position.z;
+        
         if (stop != true)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
