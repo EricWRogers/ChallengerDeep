@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class FishWanderState : State
+public class FishChaseState : State
 {
     public override void OnStart()
     {
