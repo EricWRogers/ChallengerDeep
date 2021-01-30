@@ -17,14 +17,15 @@ public class Big_Fish_Behavior : MonoBehaviour
     /// </summary>
     public Big_Warning warning;
     /// <summary>
-    /// What direction it is moving 1 for forward -1 for backwards
+    /// What direction it is moving 1 for left to right -1 for other
     /// </summary>
     private int direcrion = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (transform.position.x < 0)
+        //gets direcetion on spawn
+        if (transform.position.x > 0)
         {
             direcrion = -1;
         }
@@ -34,12 +35,12 @@ public class Big_Fish_Behavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        move(direcrion);
+        //moves big fish only along x axis
+        transform.Translate(direcrion * speed * Time.deltaTime, 0, 0);
     }
-    void move(int direction)
-    {
-        transform.Translate(-direction * speed * Time.deltaTime, 0, 0);
-    }
+    /// <summary>
+    /// Kills fish after set time
+    /// </summary>
     private void FishDepawn()
     {
         Destroy(gameObject, killTime);
