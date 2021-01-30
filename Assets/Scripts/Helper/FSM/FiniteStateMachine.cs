@@ -1,18 +1,23 @@
 using UnityEngine;
+using System.Collections.Generic;
 public abstract class FiniteStateMachine : MonoBehaviour
 {
-    protected IState state = null;
+    [Header("States")]
+    [HideInInspector]    
+    public List<State> States;                
+    protected State state = null;
 
-    public void SetState(IState _state)
+    public void SetState(State _state)
     {
         if(_state == null)
             return;
         if (state != null)
-            state.Exit();
+        {
+            state.OnExit();
+        }
         
         state = _state;
-
-        state.Start();
+        state.OnStart();
     }
 
     public void FixedUpdate()
