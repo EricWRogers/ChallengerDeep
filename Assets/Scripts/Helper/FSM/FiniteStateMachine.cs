@@ -15,11 +15,11 @@ public abstract class FiniteStateMachine : MonoBehaviour
         state.Start();
     }
 
-    public void FixedUpdate(float _dt)
+    public void FixedUpdate()
     {
         if(state == null)
             return;
         
-        state.UpdateState(_dt);
+        state.UpdateState(Time.deltaTime);
     }
 }
