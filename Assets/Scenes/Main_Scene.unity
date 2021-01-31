@@ -1053,7 +1053,12 @@ PrefabInstance:
     - target: {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6289867380670498908, guid: 684213a9aa0d4d046ab50394c31316fb,
+        type: 3}
+      propertyPath: state
+      value: FishDecisionState
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684213a9aa0d4d046ab50394c31316fb, type: 3}

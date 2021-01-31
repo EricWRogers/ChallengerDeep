@@ -8,11 +8,14 @@ public class FishAIStateMachine : FishStateMachine
     public FishChaseState FishChase;
     public FishAttackState FishAttack;
 
+    public FishDecisionState FishDecision;
+
     void Awake()
     {
         States.Add(FishWander);
         States.Add(FishChase);
         States.Add(FishAttack);
+        States.Add(FishDecision);
 
         foreach(State state in States)
             state.StateMachine = this;
