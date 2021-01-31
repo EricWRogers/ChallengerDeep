@@ -7,6 +7,7 @@ public class Main_Menu : MonoBehaviour
 {
     public string firstlevel;
     public GameObject optionsScreen;
+    public GameObject creditsScreen;
 
     public void StartGame()
     {
@@ -26,5 +27,15 @@ public class Main_Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void OpenCredits()
+    {
+        creditsScreen.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        creditsScreen.SetActive(false);
     }
 }
