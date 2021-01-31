@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5543350660802401936
 Transform:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8066080999755650432
 Transform:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: FishChaseState
+  state: FishDecisionState
 --- !u!65 &7243285286887483255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -452,6 +452,17 @@ MonoBehaviour:
     caseDurationTime: 2
     speed: 25
     Direction: {x: 0, y: 0, z: 1}
+  FishDecision:
+    StateStart:
+      m_PersistentCalls:
+        m_Calls: []
+    StateUpdated:
+      m_PersistentCalls:
+        m_Calls: []
+    StateExited:
+      m_PersistentCalls:
+        m_Calls: []
+    StateMachine: {fileID: 0}
 --- !u!114 &4032870589969543664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +697,7 @@ GameObject:
   - component: {fileID: 3012095903884304337}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8585005642626271039
 Transform:
   m_ObjectHideFlags: 0

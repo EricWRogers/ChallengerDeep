@@ -9,6 +9,6 @@ public class AIStateChangeColliders : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-            transform.parent.GetComponentInParent<FiniteStateMachine>().ChangeState(state);
+            transform.parent.GetComponentInParent<FishAIStateMachine>().ChangeState(state);
     }
 }
