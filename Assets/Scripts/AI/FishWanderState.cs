@@ -7,13 +7,14 @@ public class FishWanderState : State
 {
     public Vector3 Direction = new Vector3();
     public float Speed;
+    public float TimeTillFree = 10.0f;
     Timer timer = null;
     public override void OnStart()
     {
         base.OnStart();
         timer = StateMachine.GetComponent<Timer>();
         timer.TimeOut.AddListener(TimeOut);
-        timer.StartTimer(10.0f, false);
+        timer.StartTimer(TimeTillFree, false);
     }
 
     public override void UpdateState(float dt)
