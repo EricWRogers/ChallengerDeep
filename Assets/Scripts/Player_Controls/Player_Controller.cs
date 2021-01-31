@@ -13,7 +13,7 @@ public class Player_Controller : MonoBehaviour
     /// </summary>
     public bool stop = true;
     public float maxSpeed = 10.0f;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     public int padding = 10;
     // Start is called before the first frame update
 
@@ -30,7 +30,7 @@ public class Player_Controller : MonoBehaviour
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     private void Update()
