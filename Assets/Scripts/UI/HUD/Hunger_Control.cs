@@ -34,4 +34,10 @@ public class Hunger_Control : MonoBehaviour
     {
         hungerSlider.value = hunger;
     }
+
+    public void ResetHunger()
+    {
+        hungerSlider.value = 0;
+        hunger = 0;
+    }
 }
