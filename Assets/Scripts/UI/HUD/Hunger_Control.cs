@@ -11,16 +11,20 @@ public class Hunger_Control : MonoBehaviour
     public float hunger;
     public float hungerOverTime;
     public GameObject playa;
-
+    public void Start()
+    {
+        SetMaxHunger();
+    }
     public void Update()
     {
         hunger -= hungerOverTime * Time.deltaTime;
+        SetHunger();
 
         if(hunger <= 0)
         {
             //GAME OVER
             Debug.Log("You Died");
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("You Lose");
         }
     }
 
@@ -37,7 +41,7 @@ public class Hunger_Control : MonoBehaviour
 
     public void ResetHunger()
     {
-        hungerSlider.value = 0;
-        hunger = 0;
+        hungerSlider.value = hungerSlider.maxValue;
+        hunger = hungerSlider.maxValue;
     }
 }
