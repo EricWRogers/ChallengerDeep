@@ -21,7 +21,7 @@ public class OptionsMenu : MonoBehaviour
 
     public AudioSource sfxLoop;
 
-    public void Start()
+    public void Awake()
     {
         fullscreenTog.isOn = Screen.fullScreen;
 
