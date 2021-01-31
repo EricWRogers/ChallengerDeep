@@ -9,9 +9,11 @@ public class FishWanderState : State
     public float Speed;
     public float TimeTillFree = 10.0f;
     Timer timer = null;
+    Rigidbody rigidbody;
     public override void OnStart()
     {
         base.OnStart();
+        rigidbody = StateMachine.GetComponent<Rigidbody>();
         timer = StateMachine.GetComponent<Timer>();
         timer.TimeOut.AddListener(TimeOut);
         timer.StartTimer(TimeTillFree, false);
@@ -20,7 +22,7 @@ public class FishWanderState : State
     public override void UpdateState(float dt)
     {
         base.UpdateState(dt);
-        StateMachine.transform.Translate(Direction * Speed * dt);
+        rigidbody.transform.Translate(Direction * Speed * dt);
     }
 
     public override void OnExit()
