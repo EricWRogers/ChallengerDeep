@@ -12,7 +12,9 @@ public class Player_Controller : MonoBehaviour
     /// This determines if the player can move.
     /// </summary>
     public bool stop = true;
+    public float maxSpeed = 10.0f;
     private Rigidbody2D rb;
+    public int padding = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +32,27 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(Input.mousePosition.x < padding) { return; }
+        if (Input.mousePosition.x > Screen.width - padding) { return; }
+        if (Input.mousePosition.y < padding) { return; }
+        if (Input.mousePosition.y > Screen.height - padding) { return; }
         //finds where the mouse is
         Vector3 mouseInWorld = Camera.main.ScreenToWorldPoint(new Vector3
             (Input.mousePosition.x, Input.mousePosition.y, 10));
         //rotates player to mouse position
         rb.transform.LookAt(mouseInWorld);
         //finds the location of the mouse
-        var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetPos.z = transform.position.z;
         //moves if not stopped
         if (stop != true)
         {
             //movement speed is calculated by multiplying the base speed by distance from the mouse
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, 
-                (calcMouseDistance() * speed) * Time.deltaTime);
+            float moveSpeed = calcMouseDistance() * speed;
+            if(moveSpeed > maxSpeed)
+            {
+                moveSpeed = maxSpeed;
+            }
+            transform.position = Vector3.MoveTowards(transform.position, mouseInWorld, 
+                moveSpeed * Time.deltaTime);
         }
     }
     /// <summary>

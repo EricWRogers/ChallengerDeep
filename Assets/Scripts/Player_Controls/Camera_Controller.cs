@@ -9,22 +9,9 @@ public class Camera_Controller : MonoBehaviour
     /// </summary>
     public GameObject player;
 
-    /// <summary>
-    /// Stores the offset value for the camera
-    /// </summary>
-    private Vector3 offset;
-
-    /// <summary>
-    /// At start up the offset is determined by the player object's position
-    /// </summary>
-    void Start()
-    {
-        offset = transform.position - player.transform.position;
-    }
-
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = new Vector3(0,Mathf.Lerp(transform.position.y, player.transform.position.y, Time.deltaTime),-10);
     }
 }
