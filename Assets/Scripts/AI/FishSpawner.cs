@@ -29,7 +29,7 @@ public class FishSpawner : MonoBehaviour
                 x = SpawnRect.x;
             else
                 x = SpawnRect.xMax;
-            
+             
             y = Random.Range(SpawnRect.y, SpawnRect.yMax);
         }
         else{
@@ -41,7 +41,10 @@ public class FishSpawner : MonoBehaviour
             x = Random.Range(SpawnRect.x, SpawnRect.xMax);
         }
 
-        Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
+        GameObject fish = Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
+        fish.transform.LookAt( new Vector3(Player_Controller.Instance.transform.position.x + Random.Range(-25,25), 
+         Player_Controller.Instance.transform.position.y + Random.Range(-25,25), 0.0f));
+        fish.transform.SetParent(transform);
     }
 
     void OnDrawGizmos()

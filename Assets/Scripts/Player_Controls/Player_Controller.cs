@@ -16,6 +16,18 @@ public class Player_Controller : MonoBehaviour
     private Rigidbody2D rb;
     public int padding = 10;
     // Start is called before the first frame update
+
+    public static Player_Controller Instance { get; private set; } = null;
+
+    void Awake() 
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
