@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5543350660802401936}
-  - component: {fileID: 3816523358180423540}
   - component: {fileID: 6289867380670498906}
+  - component: {fileID: 2454114397663267171}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -111,22 +111,6 @@ Transform:
   m_Father: {fileID: 1431129857747439463}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &3816523358180423540
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3485207961135716530}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.055
 --- !u!114 &6289867380670498906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +124,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: FishWanderState
+--- !u!65 &2454114397663267171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485207961135716530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24661848, y: 0.14385399, z: 0.12682319}
+  m_Center: {x: -0.012585148, y: 0.0036676973, z: 0.01356113}
 --- !u!1 &3496427883578315592
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +146,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8066080999755650432}
-  - component: {fileID: 229303009352092512}
   - component: {fileID: 6289867380670498908}
+  - component: {fileID: 7243285286887483255}
   m_Layer: 0
   m_Name: Wounder
   m_TagString: Untagged
@@ -172,22 +169,6 @@ Transform:
   m_Father: {fileID: 1431129857747439463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &229303009352092512
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3496427883578315592}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 324983, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!114 &6289867380670498908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +182,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: FishChaseState
+--- !u!65 &7243285286887483255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496427883578315592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22548017, y: 0.20183593, z: 0.43744114}
+  m_Center: {x: 0.0016272217, y: 0.015587896, z: -0.07959228}
 --- !u!1 &3795302324005879134
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3606653691201950670}
-  - component: {fileID: 7266848720289147749}
+  - component: {fileID: 1896867528228343841}
   - component: {fileID: 1308542734940199955}
   - component: {fileID: 4032870589969543664}
   - component: {fileID: -7917885230744486022}
@@ -320,27 +314,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &7266848720289147749
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &1896867528228343841
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4127189246547183988}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 72
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1308542734940199955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639983326919014207}
-  - component: {fileID: 8864386592679705012}
+  - component: {fileID: 3012095903884304337}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -716,22 +705,19 @@ Transform:
   m_Father: {fileID: 1431129857747439463}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &8864386592679705012
-CircleCollider2D:
+--- !u!65 &3012095903884304337
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5726959391113278572}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 537173.5, y: 0}
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.094024934
+  m_Size: {x: 0.233163, y: 0.20123687, z: 0.26071486}
+  m_Center: {x: -0.008522093, y: -0.020425364, z: -0.06500526}
 --- !u!1 &5955151122374104441
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,8 +727,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8585005642626271039}
-  - component: {fileID: 9130049783146965525}
   - component: {fileID: 6289867380670498907}
+  - component: {fileID: 6905992094474119661}
   m_Layer: 0
   m_Name: Chace
   m_TagString: Untagged
@@ -764,22 +750,6 @@ Transform:
   m_Father: {fileID: 1431129857747439463}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &9130049783146965525
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5955151122374104441}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.0995
 --- !u!114 &6289867380670498907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,6 +763,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: FishAttackState
+--- !u!65 &6905992094474119661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955151122374104441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23568755, y: 0.15547991, z: 0.29010317}
+  m_Center: {x: -0.009183764, y: -0.0040509105, z: -0.009266898}
 --- !u!1 &7150727918749299250
 GameObject:
   m_ObjectHideFlags: 0
