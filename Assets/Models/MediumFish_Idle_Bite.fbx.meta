@@ -9,7 +9,12 @@ ModelImporter:
   - first:
       74: 1963171540357596104
     second: Bite
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 21122c8aeeb32e7428e456e68d96c38c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
