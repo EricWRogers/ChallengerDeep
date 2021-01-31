@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class YouWon : MonoBehaviour
 {
+    void Start()
+    {
+        GetComponent<Timer>().TimeOut.AddListener(ChangeScene);
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-            SceneManager.LoadScene("MainMenu");
+            GetComponent<Timer>().StartTimer(3.0f, false);
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("You Win");
     }
 }
