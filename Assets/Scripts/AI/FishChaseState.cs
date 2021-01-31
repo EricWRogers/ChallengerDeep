@@ -5,27 +5,34 @@ using UnityEngine;
 [System.Serializable]
 public class FishChaseState : State
 {
+    public float caseDurationTime;
     Timer ignoreTime;
+    RaycastHit2D playerHit;
 
     public override void OnStart()
     {
-        StateMachine.transform.Translate(GameObject.FindGameObjectWithTag("Player").transform.position * Time.deltaTime);
-        ignoreTime.TimeOut.AddListener(StopChaseing);
-        ignoreTime.StartTimer(3.0f);
-
         base.OnStart();
+
+        ignoreTime = StateMachine.GetComponent<Timer>();
+        ignoreTime.TimeOut.AddListener(StopChaseing);
+        ignoreTime.StartTimer(caseDurationTime);
+
         Debug.Log("Starting Chase State");
     }
 
     public override void UpdateState(float dt)
     {
         base.UpdateState(dt);
+        
+        StateMachine.transform.Translate(GameObject.FindGameObjectWithTag("Player").transform.position * Time.deltaTime);
     }
 
     public override void OnExit()
     {
-        ignoreTime.TimeOut.RemoveListener(StopChaseing);
         base.OnExit();
+
+        ignoreTime.TimeOut.RemoveListener(StopChaseing);
+        ignoreTime.StopTimer();
 
         Debug.Log("Exitting Chase State");
     }
@@ -34,6 +41,5 @@ public class FishChaseState : State
     {
         StateMachine.transform.Rotate(0, 0, 180f);
         StateMachine.ChangeState(nameof(FishWanderState));
-        // Change to Ignore State
     }
 }
