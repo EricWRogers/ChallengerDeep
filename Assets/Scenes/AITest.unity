@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4b973271a8e1a48a2b6f85b8a1ddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fishy: {fileID: 3981459868794243418, guid: e6e8c9a455040e904820284c8697d7cd, type: 3}
+  Fishy: {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb, type: 3}
 --- !u!4 &1219006620
 Transform:
   m_ObjectHideFlags: 0
@@ -472,71 +472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6289867380670498903}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6289867380670498903}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308542734940199955, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: FishAttack.StateExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3606653691201950670, guid: 684213a9aa0d4d046ab50394c31316fb,
         type: 3}
       propertyPath: m_RootOrder
@@ -592,6 +527,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb,
         type: 3}
       propertyPath: m_Name
@@ -599,60 +549,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684213a9aa0d4d046ab50394c31316fb, type: 3}
---- !u!1 &6289867380670498903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3485207961135716530, guid: 684213a9aa0d4d046ab50394c31316fb,
-    type: 3}
-  m_PrefabInstance: {fileID: 6289867380670498902}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6289867380670498904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5955151122374104441, guid: 684213a9aa0d4d046ab50394c31316fb,
-    type: 3}
-  m_PrefabInstance: {fileID: 6289867380670498902}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6289867380670498905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3496427883578315592, guid: 684213a9aa0d4d046ab50394c31316fb,
-    type: 3}
-  m_PrefabInstance: {fileID: 6289867380670498902}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6289867380670498906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289867380670498903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: FishWanderState
---- !u!114 &6289867380670498907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289867380670498904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: FishAttackState
---- !u!114 &6289867380670498908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289867380670498905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: FishChaseState
