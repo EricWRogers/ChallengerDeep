@@ -14,7 +14,7 @@ public class FishDecisionState : State
         {
             //StateMachine.ChangeState(nameof(FishFleeState));
         }
-        else if(Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeLevel == StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
+        if(Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeLevel == StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
         {
             StateMachine.ChangeState(nameof(FishWanderState));
         }
