@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999997, y: 0.27159652, z: 0.17422415}
-  m_Center: {x: -1.3322274e-15, y: -0.02440882, z: 0.2149177}
+  m_Size: {x: 0.9999997, y: 0.32647038, z: 0.3012713}
+  m_Center: {x: -5.357835e-16, y: -0.0143004805, z: 0.27844143}
 --- !u!114 &342926755397419613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +627,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 60c0c575f07088f4fb97177b2ca11ae2, type: 2}
+    - target: {fileID: 5866666021909216657, guid: ce74332d06134f2478788daba07d81ae,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce74332d06134f2478788daba07d81ae, type: 3}
 --- !u!1 &8158622375533485168 stripped
@@ -739,6 +744,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fbbbd8f9345812d4982d1ddacc6af90f, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 45ed117672968eb439cd3e18bf6a8732,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ed117672968eb439cd3e18bf6a8732, type: 3}
 --- !u!1 &6797690174567115240 stripped
@@ -856,6 +866,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ea52751c37d15c94e959ab649b161a60, type: 2}
+    - target: {fileID: 5866666021909216657, guid: b14166a68414f9e4aaa9573d5a607da7,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14166a68414f9e4aaa9573d5a607da7, type: 3}
 --- !u!1 &1651888524823467227 stripped
@@ -1090,6 +1105,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 405b8415f23a2104294682b1bafbcaf3, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 9e01252efa0e42442b71c8a39b89ea52,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e01252efa0e42442b71c8a39b89ea52, type: 3}
 --- !u!1 &8210763900296634891 stripped

@@ -42,9 +42,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.23039979
-  m_Height: 1.4870031
+  m_Height: 1.3723708
   m_Direction: 1
-  m_Center: {x: -0.10430715, y: -0.70184255, z: 0.13448055}
+  m_Center: {x: -0.10430716, y: -0.7591587, z: 0.13448031}
 --- !u!1 &1930505725855377942
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,9 +233,10 @@ GameObject:
   - component: {fileID: 2114263371909528341}
   - component: {fileID: 3929426995273763608}
   - component: {fileID: 2816370145800456093}
+  - component: {fileID: 3254611927954474320}
   m_Layer: 0
   m_Name: Enemy Level 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +271,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 72
   m_CollisionDetection: 0
 --- !u!114 &3929426995273763608
 MonoBehaviour:
@@ -442,6 +443,18 @@ MonoBehaviour:
   AutoStart: 0
   AutoRestart: 0
   CountDownTime: 1
+--- !u!114 &3254611927954474320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715791474289018994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bc90622fe50a9a799773f42a4d3532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8188286112582750996
 GameObject:
   m_ObjectHideFlags: 0
