@@ -246,7 +246,7 @@ PrefabInstance:
     - target: {fileID: 3201229408576535850, guid: b23dffcb6ab3a2040a5ddf5beb975ab1,
         type: 3}
       propertyPath: hunger
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3201229408576535851, guid: b23dffcb6ab3a2040a5ddf5beb975ab1,
         type: 3}
@@ -922,7 +922,7 @@ PrefabInstance:
     - target: {fileID: 523480279396301107, guid: 93782a228cf54a143b059cfcad0a26d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -300
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 523480279396301107, guid: 93782a228cf54a143b059cfcad0a26d1,
         type: 3}
