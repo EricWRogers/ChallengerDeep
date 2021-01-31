@@ -379,7 +379,7 @@ MonoBehaviour:
           m_CallState: 2
     StateMachine: {fileID: 0}
     Direction: {x: 0, y: 0, z: 1}
-    Speed: 15
+    Speed: 10
     TimeTillFree: 10
   FishChase:
     StateStart:
@@ -415,7 +415,7 @@ MonoBehaviour:
           m_CallState: 2
     StateMachine: {fileID: 0}
     caseDurationTime: 5
-    speed: 20
+    speed: 15
     Direction: {x: 0, y: 0, z: 1}
   FishAttack:
     StateStart:
@@ -478,7 +478,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     StateMachine: {fileID: 0}
-    Speed: 20
+    Speed: 15
     Direction: {x: 0, y: 0, z: 1}
 --- !u!114 &4032870589969543664
 MonoBehaviour:
