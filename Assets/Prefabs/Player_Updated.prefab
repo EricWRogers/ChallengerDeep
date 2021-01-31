@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  stop: 1
+  stop: 0
   maxSpeed: 10
   padding: 5
 --- !u!54 &8208895346417734870
@@ -615,7 +615,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce74332d06134f2478788daba07d81ae,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ce74332d06134f2478788daba07d81ae,
         type: 3}
@@ -732,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45ed117672968eb439cd3e18bf6a8732,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 45ed117672968eb439cd3e18bf6a8732,
         type: 3}
@@ -844,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b14166a68414f9e4aaa9573d5a607da7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b14166a68414f9e4aaa9573d5a607da7,
         type: 3}
@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 445463285d829fb4db557f90fce5d220,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 445463285d829fb4db557f90fce5d220,
         type: 3}
@@ -1078,7 +1078,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9e01252efa0e42442b71c8a39b89ea52,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e01252efa0e42442b71c8a39b89ea52,
         type: 3}
