@@ -46,13 +46,20 @@ public class FishSpawner : MonoBehaviour
         float compairY = y / 100;
         int closestItemInList = 0;
 
-        for(int i = 0; i < FishsAtLevels.Count;i++)
+        /*for(int i = 0; i < FishsAtLevels.Count;i++)
         {
-            if(Mathf.Abs(y - i) >= Mathf.Abs(y - closestItemInList) )
+            if(Mathf.Abs(compairY - i) >= Mathf.Abs(compairY - closestItemInList) )
             {
                 closestItemInList = i;
             }
-        }
+        }*/
+
+        if(y < -50)
+            closestItemInList = 1;
+        if(y < -100)
+            closestItemInList = 2;
+        if(y < -150)
+            closestItemInList = 3;
 
         GameObject fish = Instantiate(FishsAtLevels[closestItemInList].FishInZone[Random.Range(0,FishsAtLevels[closestItemInList].FishInZone.Count-1)], new Vector3(x,y,0.0f), Quaternion.identity);
         fish.transform.SetParent(transform);
