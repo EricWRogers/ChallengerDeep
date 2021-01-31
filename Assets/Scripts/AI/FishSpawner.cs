@@ -58,12 +58,7 @@ public class FishSpawner : MonoBehaviour
         fish.transform.SetParent(transform);
     }
 
-    void OnDrawGizmos()
-    {
-        // Green Spawn Rect
-        Gizmos.color = new Color(0.0f, 1.0f, 0.0f);
-        DrawRect(SpawnRect);
-    }
+    
     void GenerateBounds(ref Rect rect, int padding)
     {
         Vector3 topLeftBounds = Camera.main.ScreenToWorldPoint(new Vector3(-padding, -padding, 1));

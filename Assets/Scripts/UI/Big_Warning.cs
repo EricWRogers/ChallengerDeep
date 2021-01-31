@@ -159,13 +159,4 @@ public class Big_Warning : MonoBehaviour
     {
         Gizmos.DrawWireCube(new Vector3(rect.center.x, rect.center.y, 0.01f), new Vector3(rect.size.x, rect.size.y, 0.01f));
     }
-    /// <summary>
-    /// Sets the color for the rectangle
-    /// </summary>
-    void OnDrawGizmos()
-    {
-        // red Spawn Rect
-        Gizmos.color = new Color(1.0f, 0.0f, 0.0f);
-        DrawRect(warningRect);
-    }
 }
