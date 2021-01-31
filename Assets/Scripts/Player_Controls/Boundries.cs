@@ -5,10 +5,6 @@ using UnityEngine;
 public class Boundries : MonoBehaviour
 {
     /// <summary>
-    /// The camera to stay in bounds of
-    /// </summary>
-    public Camera MainCamera;
-    /// <summary>
     /// The body of the player character
     /// </summary>
     public GameObject body;
@@ -37,10 +33,10 @@ public class Boundries : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 TopLeft = MainCamera.ScreenToWorldPoint(new Vector3(0, 0, MainCamera.transform.position.z));
+        Vector3 TopLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z));
         //Gets the size of the screen
-        screenBounds = MainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,
-             MainCamera.transform.position.z));
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,
+             Camera.main.transform.position.z));
         cameraRect.x = TopLeft.x;
         cameraRect.y = TopLeft.y;
         cameraRect.xMax = screenBounds.x;
