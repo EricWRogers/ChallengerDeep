@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour
 {
     public GameObject Fishy = null;
-    public List<List<GameObject>> FishsAtLevels = new List<List<GameObject>>();
+    public List<FishZone> FishsAtLevels = new List<FishZone>();
     Rect SpawnRect = new Rect();
     Timer timer;
 
@@ -48,13 +48,13 @@ public class FishSpawner : MonoBehaviour
 
         for(int i = 0; i < FishsAtLevels.Count;i++)
         {
-            if(Mathf.Abs(y - i) <= Mathf.Abs(y - closestItemInList) )
+            if(Mathf.Abs(y - i) >= Mathf.Abs(y - closestItemInList) )
             {
                 closestItemInList = i;
             }
         }
 
-        GameObject fish = Instantiate(FishsAtLevels[closestItemInList][Random.Range(0,FishsAtLevels[closestItemInList].Count-1)], new Vector3(x,y,0.0f), Quaternion.identity);
+        GameObject fish = Instantiate(FishsAtLevels[closestItemInList].FishInZone[Random.Range(0,FishsAtLevels[closestItemInList].FishInZone.Count-1)], new Vector3(x,y,0.0f), Quaternion.identity);
         fish.transform.SetParent(transform);
     }
 
@@ -78,4 +78,9 @@ public class FishSpawner : MonoBehaviour
     {
         Gizmos.DrawWireCube(new Vector3(rect.center.x, rect.center.y, 0.01f), new Vector3(rect.size.x, rect.size.y, 0.01f));
     }
+}
+[System.Serializable]
+public class FishZone
+{
+    public List<GameObject> FishInZone = new List<GameObject>();
 }
