@@ -6,6 +6,7 @@ using UnityEngine;
 public class FishChaseState : State
 {
     public float caseDurationTime;
+    public float speed;
     Timer ignoreTime;
     RaycastHit2D playerHit;
 
@@ -13,6 +14,7 @@ public class FishChaseState : State
     {
         base.OnStart();
 
+        speed = 5.0f;
         ignoreTime = StateMachine.GetComponent<Timer>();
         ignoreTime.TimeOut.AddListener(StopChaseing);
         ignoreTime.StartTimer(caseDurationTime);
@@ -24,7 +26,7 @@ public class FishChaseState : State
     {
         base.UpdateState(dt);
         
-        StateMachine.transform.Translate(GameObject.FindGameObjectWithTag("Player").transform.position * Time.deltaTime);
+        StateMachine.transform.Translate(Player_Controller.Instance.transform.position * speed * Time.deltaTime);
     }
 
     public override void OnExit()
@@ -39,7 +41,7 @@ public class FishChaseState : State
 
     void StopChaseing()
     {
-        StateMachine.transform.Rotate(0, 0, 180f);
+        //StateMachine.transform.Rotate(0, 0, 180f);
         StateMachine.ChangeState(nameof(FishWanderState));
     }
 }

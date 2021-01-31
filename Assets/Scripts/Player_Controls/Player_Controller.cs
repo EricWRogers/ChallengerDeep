@@ -14,6 +14,18 @@ public class Player_Controller : MonoBehaviour
     public bool stop = true;
     private Rigidbody2D rb;
     // Start is called before the first frame update
+
+    public static Player_Controller Instance { get; private set; } = null;
+
+    void Awake() 
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
