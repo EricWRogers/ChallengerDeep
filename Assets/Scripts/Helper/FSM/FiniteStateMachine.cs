@@ -4,7 +4,8 @@ public abstract class FiniteStateMachine : MonoBehaviour
 {
     [Header("States")]
     [HideInInspector]    
-    public List<State> States;                
+    public List<State> States;
+    public string StateName;           
     protected State state = null;
 
     private void SetState(State _state)
@@ -28,6 +29,7 @@ public abstract class FiniteStateMachine : MonoBehaviour
             if(stateName.ToLower() == _state.GetType().ToString().ToLower())
             {
                 SetState(_state);
+                StateName = stateName;
                 return;
             }
         }
