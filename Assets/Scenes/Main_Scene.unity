@@ -693,6 +693,8 @@ MonoBehaviour:
     - {fileID: 3981459868794243418, guid: e6e8c9a455040e904820284c8697d7cd, type: 3}
   - FishInZone:
     - {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb, type: 3}
+  - FishInZone:
+    - {fileID: 2877537636558167936, guid: 898fae938ed4c1741ab1847cd359d98f, type: 3}
 --- !u!1 &1367140396
 GameObject:
   m_ObjectHideFlags: 0
