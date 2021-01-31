@@ -30,4 +30,13 @@ public class FishAIStateMachine : FishStateMachine
         transform.LookAt( new Vector3(Player_Controller.Instance.transform.position.x + Random.Range(-25,25), 
             Player_Controller.Instance.transform.position.y + Random.Range(-25,25), 0.0f));
     }
+
+    public void DamagePLayer()
+    {
+        // play eating animashion
+        // reset animashion trigger 
+
+
+        Player_Controller.Instance.gameObject.GetComponent<Size_Control>().hungerControl.hunger = 0;
+    }
 }

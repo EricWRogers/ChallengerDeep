@@ -7,7 +7,9 @@ public class FishAttackState : State
 {
     public float caseDurationTime;
     public float speed;
+    public float AttackDamage;
     public Vector3 Direction;
+    public GameObject Hud;
     Timer ignoreTime;
     RaycastHit2D playerHit;
     Rigidbody rigidbody;

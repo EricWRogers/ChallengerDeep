@@ -123,7 +123,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: FishWanderState
+  Trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1308542734940199955}
+        m_MethodName: ChangeState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FishWanderState
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1308542734940199955}
+        m_MethodName: DamagePLayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2454114397663267171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -181,7 +205,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: FishDecisionState
+  Trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1308542734940199955}
+        m_MethodName: ChangeState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FishDecisionState
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &7243285286887483255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -452,7 +489,9 @@ MonoBehaviour:
     StateMachine: {fileID: 0}
     caseDurationTime: 2
     speed: 25
+    AttackDamage: 0
     Direction: {x: 0, y: 0, z: 1}
+    Hud: {fileID: 0}
   FishDecision:
     StateStart:
       m_PersistentCalls:
@@ -791,7 +830,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59f5e84b4238a4abcdc07509ed3307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: FishAttackState
+  Trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1308542734940199955}
+        m_MethodName: ChangeState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FishAttackState
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6905992094474119661
 BoxCollider:
   m_ObjectHideFlags: 0
