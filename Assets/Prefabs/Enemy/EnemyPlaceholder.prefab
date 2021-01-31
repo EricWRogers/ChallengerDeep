@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   States: []
+  Level: 1
   FishWander:
     StateStart:
       m_PersistentCalls:
@@ -367,6 +368,7 @@ MonoBehaviour:
     StateMachine: {fileID: 0}
     Direction: {x: 0, y: 0, z: 1}
     Speed: 15
+    TimeTillFree: 10
   FishChase:
     StateStart:
       m_PersistentCalls:
@@ -400,8 +402,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     StateMachine: {fileID: 0}
-    caseDurationTime: 0
-    speed: 0
+    caseDurationTime: 2
+    speed: 20
+    Direction: {x: 0, y: 0, z: 1}
   FishAttack:
     StateStart:
       m_PersistentCalls:
@@ -653,9 +656,57 @@ Transform:
   - {fileID: 8066080999755650432}
   - {fileID: 8585005642626271039}
   - {fileID: 5543350660802401936}
+  - {fileID: 3639983326919014207}
   m_Father: {fileID: 3606653691201950670}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5726959391113278572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3639983326919014207}
+  - component: {fileID: 8864386592679705012}
+  m_Layer: 0
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3639983326919014207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726959391113278572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1431129857747439463}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8864386592679705012
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726959391113278572}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 537173.5, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.094024934
 --- !u!1 &5955151122374104441
 GameObject:
   m_ObjectHideFlags: 0

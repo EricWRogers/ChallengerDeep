@@ -527,25 +527,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: m_Simulated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3857281477270086506, guid: 684213a9aa0d4d046ab50394c31316fb,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb,
         type: 3}
       propertyPath: m_Name
       value: EnemyPlaceholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127189246547183988, guid: 684213a9aa0d4d046ab50394c31316fb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684213a9aa0d4d046ab50394c31316fb, type: 3}

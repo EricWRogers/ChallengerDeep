@@ -7,6 +7,8 @@ public class FishChaseState : State
 {
     public float caseDurationTime;
     public float speed;
+
+    public Vector3 Direction;
     Timer ignoreTime;
     RaycastHit2D playerHit;
 
@@ -26,7 +28,8 @@ public class FishChaseState : State
     {
         base.UpdateState(dt);
         
-        StateMachine.transform.Translate(Player_Controller.Instance.transform.position * speed * Time.deltaTime);
+        StateMachine.transform.LookAt(Player_Controller.Instance.transform.position);
+        StateMachine.transform.Translate(Direction * speed * dt);
     }
 
     public override void OnExit()
