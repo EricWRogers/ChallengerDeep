@@ -236,18 +236,7 @@ MonoBehaviour:
   m_Value: 30
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3201229408576535850}
-        m_MethodName: SetMaxHunger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3201229408576535850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hungerSlider: {fileID: 3201229408576535851}
-  hunger: 30
+  hunger: 50
   hungerOverTime: 1
   playa: {fileID: 0}
 --- !u!1 &3201229408706522550
@@ -348,6 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3201229409356034615}
   - component: {fileID: 3201229409356034614}
+  - component: {fileID: 572345130}
   m_Layer: 5
   m_Name: Progress Bar
   m_TagString: Untagged
@@ -426,6 +416,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &572345130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3201229409356034608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c971beeafac6be441a3ec508d73381db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressSlider: {fileID: 3201229409356034614}
+  sizeControl: {fileID: 0}
 --- !u!1 &3201229409376875655
 GameObject:
   m_ObjectHideFlags: 0
