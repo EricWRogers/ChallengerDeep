@@ -5,6 +5,7 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour
 {
     public GameObject Fishy = null;
+    public List<List<GameObject>> FishsAtLevels = new List<List<GameObject>>();
     Rect SpawnRect = new Rect();
     Timer timer;
 
@@ -42,7 +43,18 @@ public class FishSpawner : MonoBehaviour
             x = Random.Range(SpawnRect.x, SpawnRect.xMax);
         }
 
-        GameObject fish = Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
+        float compairY = y / 100;
+        int closestItemInList = 0;
+
+        for(int i = 0; i < FishsAtLevels.Count;i++)
+        {
+            if(Mathf.Abs(y - i) <= Mathf.Abs(y - closestItemInList) )
+            {
+                closestItemInList = i;
+            }
+        }
+
+        GameObject fish = Instantiate(FishsAtLevels[closestItemInList][Random.Range(0,FishsAtLevels[closestItemInList].Count-1)], new Vector3(x,y,0.0f), Quaternion.identity);
         fish.transform.SetParent(transform);
     }
 
