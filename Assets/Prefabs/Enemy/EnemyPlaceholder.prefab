@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   States: []
+  StateName: 
   Level: 1
   FishWander:
     StateStart:
@@ -463,6 +464,22 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     StateMachine: {fileID: 0}
+    PlayerLevel: 0
+    AiLevel: 0
+    HasMadeDecision: 0
+  FishFlee:
+    StateStart:
+      m_PersistentCalls:
+        m_Calls: []
+    StateUpdated:
+      m_PersistentCalls:
+        m_Calls: []
+    StateExited:
+      m_PersistentCalls:
+        m_Calls: []
+    StateMachine: {fileID: 0}
+    Speed: 20
+    Direction: {x: 0, y: 0, z: 1}
 --- !u!114 &4032870589969543664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639983326919014207}
-  - component: {fileID: 3012095903884304337}
+  - component: {fileID: 2664266020596465960}
   m_Layer: 0
   m_Name: Body
   m_TagString: Enemy
@@ -716,8 +733,8 @@ Transform:
   m_Father: {fileID: 1431129857747439463}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3012095903884304337
-BoxCollider:
+--- !u!136 &2664266020596465960
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -726,9 +743,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.233163, y: 0.20123687, z: 0.26071486}
-  m_Center: {x: -0.008522093, y: -0.020425364, z: -0.06500526}
+  m_Radius: 0.12717228
+  m_Height: 0.2543446
+  m_Direction: 1
+  m_Center: {x: -0.014872611, y: -0.024166152, z: -0.08460604}
 --- !u!1 &5955151122374104441
 GameObject:
   m_ObjectHideFlags: 0

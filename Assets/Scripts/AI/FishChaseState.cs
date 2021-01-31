@@ -21,8 +21,6 @@ public class FishChaseState : State
         ignoreTime = StateMachine.GetComponent<Timer>();
         ignoreTime.TimeOut.AddListener(StopChaseing);
         ignoreTime.StartTimer(caseDurationTime);
-
-        Debug.Log("Starting Chase State");
     }
 
     public override void UpdateState(float dt)
@@ -39,8 +37,6 @@ public class FishChaseState : State
 
         ignoreTime.TimeOut.RemoveListener(StopChaseing);
         ignoreTime.StopTimer();
-
-        Debug.Log("Exitting Chase State");
     }
 
     void StopChaseing()
