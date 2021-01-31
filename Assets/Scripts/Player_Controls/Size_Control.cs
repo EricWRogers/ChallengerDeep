@@ -17,6 +17,7 @@ public class Size_Control : MonoBehaviour
     public int sizeLevel = 0;
     public int maxSize = 4;
     public Hunger_Control hungerControl;
+    public Player_Controller player;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class Size_Control : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            sizeProgress += testGrowAmmount;
+            //sizeProgress += testGrowAmmount;
         }
         if (sizeProgress >= 100)
         {
@@ -52,6 +53,7 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public void grow()
     {
+        player.maxSpeed += .5f;
         hungerControl.ResetHunger();
         //keeps size no higher than maxSize
         if(sizeLevel == maxSize)
