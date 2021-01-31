@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f8e4835e4f20c44c96aa8cafc3b36de
+guid: b14166a68414f9e4aaa9573d5a607da7
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -9,12 +9,7 @@ ModelImporter:
   - first:
       74: 1963171540357596104
     second: Bite
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: e908243cd6e26f7449fd6729ec8f2c0b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -76,7 +71,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 48
-      lastFrame: 60
+      lastFrame: 72
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -103,7 +98,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 8
+    globalScale: 14
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -150,8 +145,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 8
-    rootMotionBoneName: Root_jnt
+    globalScale: 14
+    rootMotionBoneName: MediumRoot_jnt
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
