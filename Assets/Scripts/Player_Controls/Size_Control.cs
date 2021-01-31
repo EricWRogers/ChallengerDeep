@@ -16,6 +16,7 @@ public class Size_Control : MonoBehaviour
     public float testGrowAmmount = 10.0f;
     public int sizeLevel = 0;
     public int maxSize = 4;
+    public Hunger_Control hungerControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +52,7 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public void grow()
     {
+        hungerControl.ResetHunger();
         //keeps size no higher than maxSize
         if(sizeLevel == maxSize)
         {

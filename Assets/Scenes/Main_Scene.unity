@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &130406200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3201229408576535850, guid: b23dffcb6ab3a2040a5ddf5beb975ab1,
+    type: 3}
+  m_PrefabInstance: {fileID: 751615750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42963ec679c642e458cd9883b2cd81a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275627761
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +670,11 @@ PrefabInstance:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 1367140400}
+    - target: {fileID: 8846950603464484172, guid: b776126b1bc3d5146840e8610d585e46,
+        type: 3}
+      propertyPath: hungerControl
+      value: 
+      objectReference: {fileID: 130406200}
     - target: {fileID: 8846950603464484173, guid: b776126b1bc3d5146840e8610d585e46,
         type: 3}
       propertyPath: m_RootOrder
