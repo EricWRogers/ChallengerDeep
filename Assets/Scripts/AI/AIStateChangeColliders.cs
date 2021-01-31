@@ -6,7 +6,7 @@ public class AIStateChangeColliders : MonoBehaviour
 {
     public string state;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
             transform.parent.GetComponentInParent<FiniteStateMachine>().ChangeState(state);
