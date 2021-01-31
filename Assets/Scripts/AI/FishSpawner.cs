@@ -41,7 +41,9 @@ public class FishSpawner : MonoBehaviour
             x = Random.Range(SpawnRect.x, SpawnRect.xMax);
         }
 
-        Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
+        GameObject fish = Instantiate(Fishy, new Vector3(x,y,0.0f), Quaternion.identity);
+        fish.transform.Rotate(new Vector3(0.0f, 0.0f, (float)Random.Range(0, 181)));
+        fish.transform.SetParent(transform);
     }
 
     void OnDrawGizmos()

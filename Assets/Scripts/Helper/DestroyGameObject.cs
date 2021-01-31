@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestoryGameObject : MonoBehaviour
+public class DestroyGameObject : MonoBehaviour
 {
     public void Kill()
     {
