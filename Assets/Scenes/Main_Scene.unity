@@ -401,7 +401,7 @@ MonoBehaviour:
       m_Calls: []
   AutoStart: 1
   AutoRestart: 1
-  CountDownTime: 0.1
+  CountDownTime: 1
 --- !u!114 &1356293749
 MonoBehaviour:
   m_ObjectHideFlags: 0

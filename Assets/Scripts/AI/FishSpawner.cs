@@ -17,6 +17,7 @@ public class FishSpawner : MonoBehaviour
 
     void SpawnFish()
     {
+        GenerateBounds(ref SpawnRect, 200);
         if (Fishy == null)
             return;
         
@@ -60,8 +61,6 @@ public class FishSpawner : MonoBehaviour
         rect.y = topLeftBounds.y;
         rect.width = bottomRightBounds.x - rect.x;
         rect.height = bottomRightBounds.y - rect.y;
-
-        Debug.Log("Rect: " + rect.ToString());
     }
     void DrawRect(Rect rect)
     {

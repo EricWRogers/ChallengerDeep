@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishAIStateMachine : FiniteStateMachine
+public class FishAIStateMachine : FishStateMachine
 {
     public FishWanderState FishWander;
     public FishChaseState FishChase;

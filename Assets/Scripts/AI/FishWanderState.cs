@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FishWanderState : State
 {
+    public Vector3 Direction = new Vector3();
     public float Speed;
     Timer timer = null;
     public override void OnStart()
@@ -18,7 +19,7 @@ public class FishWanderState : State
     public override void UpdateState(float dt)
     {
         base.UpdateState(dt);
-        StateMachine.transform.Translate(0, 0, 1 * Speed * dt);
+        StateMachine.transform.Translate(Direction * Speed * dt);
     }
 
     public override void OnExit()
