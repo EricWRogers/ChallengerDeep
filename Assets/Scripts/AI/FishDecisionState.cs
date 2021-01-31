@@ -42,7 +42,8 @@ public class FishDecisionState : State
             StateMachine.ChangeState(nameof(FishChaseState));
             return;
         }
-        StateMachine.ChangeState(nameof(FishWanderState));
+
+        StateMachine.ChangeState(nameof(FishFleeState));
     }
 
     public override void OnExit()
