@@ -24,7 +24,7 @@ public class Hunger_Control : MonoBehaviour
         {
             //GAME OVER
             Debug.Log("You Died");
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("You Lose");
         }
     }
 
