@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class FishDecisionState : State
 {
     private float randomDecision;
@@ -9,11 +10,17 @@ public class FishDecisionState : State
     {
         base.OnStart();
 
-        // 0 = Attack and 1 = Flee
-        randomDecision = Random.Range(0,1);
         if(Player_Controller.Instance.GetComponent<Size_Control>().sizeLevel > StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
         {
             //StateMachine.ChangeState(nameof(FishFleeState));
+        }
+        else if(Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeLevel == StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
+        {
+            StateMachine.ChangeState(nameof(FishWanderState));
+        }
+        else
+        {
+            StateMachine.ChangeState(nameof(FishAttackState));
         }
     }
 }
