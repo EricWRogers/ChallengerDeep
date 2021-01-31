@@ -10,7 +10,6 @@ public abstract class FiniteStateMachine : MonoBehaviour
 
     private void SetState(State _state)
     {
-        Debug.Log("State Changed: " + nameof(_state));
         if(_state == null)
             return;
         if (state != null)
@@ -29,10 +28,13 @@ public abstract class FiniteStateMachine : MonoBehaviour
             if(stateName.ToLower() == _state.GetType().ToString().ToLower())
             {
                 SetState(_state);
+                Debug.Log("State Changed: " + nameof(_state));
                 StateName = stateName;
                 return;
             }
         }
+
+        Debug.LogWarning("State Not found: " + stateName);
     }
 
     public void FixedUpdate()

@@ -23,6 +23,7 @@ public class FishWanderState : State
     {
         base.UpdateState(dt);
         rigidbody.transform.Translate(Direction * Speed * dt);
+        StateMachine.transform.position = new Vector3(StateMachine.transform.position.x, StateMachine.transform.position.y, 0.0f);
     }
 
     public override void OnExit()

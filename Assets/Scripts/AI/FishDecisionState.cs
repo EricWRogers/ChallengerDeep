@@ -6,21 +6,48 @@ using UnityEngine;
 public class FishDecisionState : State
 {
     private float randomDecision;
+    
+    public float PlayerLevel;
+    public float AiLevel;
+
+    public bool HasMadeDecision = false;
     public override void OnStart()
     {
         base.OnStart();
+    }
 
-        if(Player_Controller.Instance.GetComponent<Size_Control>().sizeLevel > StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
+    public override void UpdateState(float dt)
+    {
+        base.UpdateState(dt);
+
+        if(HasMadeDecision)
+            return;
+
+        HasMadeDecision = true;
+
+        PlayerLevel = Player_Controller.Instance.GetComponent<Size_Control>().sizeLevel + 1;
+        AiLevel = StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level;
+
+        Debug.Log("PLayer Level: " + PlayerLevel);
+        Debug.Log("AI Level: " + AiLevel);
+
+
+        if( PlayerLevel > AiLevel)
         {
-            //StateMachine.ChangeState(nameof(FishFleeState));
+            StateMachine.ChangeState(nameof(FishFleeState));
+            return;
         }
-        else if(Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeLevel == StateMachine.gameObject.GetComponent<FishAIStateMachine>().Level)
+        if(PlayerLevel < AiLevel)
         {
-            StateMachine.ChangeState(nameof(FishWanderState));
+            StateMachine.ChangeState(nameof(FishChaseState));
+            return;
         }
-        else
-        {
-            StateMachine.ChangeState(nameof(FishAttackState));
-        }
+        StateMachine.ChangeState(nameof(FishWanderState));
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        HasMadeDecision = false;
     }
 }
