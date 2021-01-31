@@ -12,16 +12,11 @@ public class Player_Controller : MonoBehaviour
     /// This determines if the player can move.
     /// </summary>
     public bool stop = true;
-    /// <summary>
-    /// The current size of the player
-    /// </summary>
-    //public float size;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        stop = true;
     }
 
     private void Update()
