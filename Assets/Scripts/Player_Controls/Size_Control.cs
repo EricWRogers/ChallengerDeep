@@ -15,6 +15,7 @@ public class Size_Control : MonoBehaviour
     public float sizeProgress = 0.0f;
     public float testGrowAmmount = 10.0f;
     public int sizeLevel = 0;
+    public int maxSize = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,8 +51,8 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public void grow()
     {
-        //keeps size no higher than 5
-        if(sizeLevel == 5)
+        //keeps size no higher than maxSize
+        if(sizeLevel == maxSize)
         {
             return;
         }

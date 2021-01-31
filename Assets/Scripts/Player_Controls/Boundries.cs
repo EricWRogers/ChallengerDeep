@@ -42,9 +42,9 @@ public class Boundries : MonoBehaviour
         cameraRect.xMax = screenBounds.x;
         cameraRect.yMax = screenBounds.y;
         //Gets the width of the model
-        objectWidth = body.transform.GetComponent<MeshRenderer>().bounds.extents.x; //extents = size of width / 2
+        objectWidth = body.transform.GetComponent<SkinnedMeshRenderer>().bounds.extents.x; //extents = size of width / 2
         //Gets the height of the model
-        objectHeight = body.transform.GetComponent<MeshRenderer>().bounds.extents.y; //extents = size of height / 2
+        objectHeight = body.transform.GetComponent<SkinnedMeshRenderer>().bounds.extents.y; //extents = size of height / 2
         Vector3 viewPos = transform.position;
         //forces object on screen in the x direction
         viewPos.x = Mathf.Clamp(viewPos.x, TopLeft.x + objectWidth, screenBounds.x - objectWidth);
