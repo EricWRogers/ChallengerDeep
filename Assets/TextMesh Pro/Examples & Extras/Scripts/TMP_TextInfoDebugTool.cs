@@ -32,7 +32,7 @@ namespace TMPro.Examples
         private float m_HandleSize;
 
 
-        void OnDrawGizmos()
+        /*void OnDrawGizmos()
         {
             if (m_TextComponent == null)
             {
@@ -90,7 +90,7 @@ namespace TMPro.Examples
             if (ShowTextBounds)
                 DrawTextBounds();
             #endregion
-        }
+        }*/
 
 
         /// <summary>
