@@ -32,17 +32,11 @@ public class FishDecisionState : State
         Debug.Log("AI Level: " + AiLevel);
 
 
-        if( PlayerLevel > AiLevel)
-        {
-            StateMachine.ChangeState(nameof(FishFleeState));
-            return;
-        }
         if(PlayerLevel < AiLevel)
         {
             StateMachine.ChangeState(nameof(FishChaseState));
             return;
         }
-
         StateMachine.ChangeState(nameof(FishFleeState));
     }
 
