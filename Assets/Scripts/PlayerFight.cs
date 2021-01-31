@@ -15,8 +15,9 @@ public class PlayerFight : MonoBehaviour
 
             if(myLevel > enemyLevel)
             {
-                //Player_Controller.Instance.gameObject.GetComponent<Animator>().SetTrigger("Eating");
-                //Player_Controller.Instance.gameObject.GetComponent<Animator>().ResetTrigger("Eating");
+                Player_Controller.Instance.gameObject.GetComponent<Size_Control>().stages[
+                    Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeLevel].
+                    GetComponent<Animator>().SetTrigger("Eating");
                 other.transform.parent.GetComponentInParent<DestroyGameObject>().Kill();
                 Player_Controller.Instance.gameObject.GetComponent<Size_Control>().sizeProgress += ((enemyLevel / myLevel) * 100);
             }

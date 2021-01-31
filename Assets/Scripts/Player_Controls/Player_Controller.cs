@@ -36,10 +36,10 @@ public class Player_Controller : MonoBehaviour
     private void Update()
     {
         //toggles coming to a dead stop
-        if (Input.GetKeyDown("space"))
-        {
-            stop = !stop;
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    stop = !stop;
+        //}
     }
     // Update is called once per frame
     void FixedUpdate()
