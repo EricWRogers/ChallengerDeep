@@ -10,6 +10,9 @@ public class FishAIStateMachine : FiniteStateMachine
 
     void Awake()
     {
+        transform.LookAt( new Vector3(Player_Controller.Instance.transform.position.x + Random.Range(-25,25), 
+            Player_Controller.Instance.transform.position.y + Random.Range(-25,25), 0.0f));
+
         States.Add(FishWander);
         States.Add(FishChase);
         States.Add(FishAttack);
