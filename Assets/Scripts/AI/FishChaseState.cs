@@ -15,8 +15,7 @@ public class FishChaseState : State
     public override void OnStart()
     {
         base.OnStart();
-
-        speed = 5.0f;
+        
         ignoreTime = StateMachine.GetComponent<Timer>();
         ignoreTime.TimeOut.AddListener(StopChaseing);
         ignoreTime.StartTimer(caseDurationTime);
