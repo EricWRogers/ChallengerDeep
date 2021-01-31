@@ -53,7 +53,7 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public void grow()
     {
-        player.maxSpeed += .5f;
+        player.maxSpeed *= 1.5f;
         hungerControl.ResetHunger();
         //keeps size no higher than maxSize
         if(sizeLevel == maxSize)
