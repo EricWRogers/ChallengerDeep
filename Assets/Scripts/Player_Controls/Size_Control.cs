@@ -53,13 +53,13 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public void grow()
     {
-        player.maxSpeed *= 1.5f;
         hungerControl.ResetHunger();
         //keeps size no higher than maxSize
         if(sizeLevel == maxSize)
         {
             return;
         }
+        player.maxSpeed *= 1.75f;
         //reset prgress to next size
         sizeProgress = 0.0f;
         //particle effect
