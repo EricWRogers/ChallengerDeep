@@ -13,6 +13,7 @@ public class Size_Control : MonoBehaviour
     /// </summary>
     public Camera MainCamera;
     public float sizeProgress = 0.0f;
+    public float testGrowAmmount = 10.0f;
     public int sizeLevel = 0;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class Size_Control : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            sizeProgress += 100;
+            sizeProgress += testGrowAmmount;
         }
         if (sizeProgress >= 100)
         {
@@ -41,7 +42,7 @@ public class Size_Control : MonoBehaviour
     {
         if(other.tag == "Enemy") 
         {
-            
+
         }
     }
     /// <summary>
